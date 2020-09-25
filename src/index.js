@@ -1,13 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App1 from './components/app/index.js'
 import * as serviceWorker from './serviceWorker';
+// import { Button } from 'element-react';
+// import 'element-theme-default';
+import store from "./store/store.js";
+import {Provider } from 'react-redux'
+// store.subscribe(()=>{
+
+// })
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // <React.StrictMode>
+    <Provider store={store}>
+      <App1 />
+    </Provider>
+  // </React.StrictMode>
+  ,
   document.getElementById('root')
 );
 
